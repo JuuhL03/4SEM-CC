@@ -1,0 +1,45 @@
+CREATE TABLE clientes (
+    cpf VARCHAR(11) PRIMARY KEY,  
+    nome VARCHAR(255) NOT NULL,
+    genero VARCHAR(50) NOT NULL,
+    idade INT NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE enderecos (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    cpf_cliente VARCHAR(11),  
+    cep VARCHAR(9) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(100),
+    FOREIGN KEY (cpf_cliente) REFERENCES clientes(cpf)  
+);
+
+CREATE TABLE carros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    modelo VARCHAR(100) NOT NULL,
+    marca VARCHAR(100) NOT NULL,
+    ano INT NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    descricao TEXT
+);
+
+CREATE TABLE vendas (
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    cpf_cliente VARCHAR(11),  
+    carro_id INT NOT NULL,  
+    quantidade INT NOT NULL,
+    preco_unitario DECIMAL(10, 2) NOT NULL,
+    forma_pagamento VARCHAR(50) NOT NULL,
+    FOREIGN KEY (cpf_cliente) REFERENCES clientes(cpf),
+    FOREIGN KEY (carro_id) REFERENCES carros(id)
+);
+
+INSERT INTO carros (modelo, marca, ano, preco, descricao) VALUES
+('Sedan Luxo', 'Audi', 2023, 90000.00, 'Sedan de luxo com conforto e tecnologia.'),
+('SUV Esportivo', 'Audi', 2023, 140000.00, 'SUV esportivo com desempenho impressionante.'),
+('Esportivo Turbo', 'Porsche', 2023, 550000.00, 'Carro esportivo turbo com alta performance.'),
+('Hatch Compacto', 'Hyundai', 2023, 60000.00, 'Hatch compacto ideal para a cidade.'),
+('Picape Off-road', 'Marca Desconhecida', 2023, 150000.00, 'Picape off-road com robustez e capacidade.');

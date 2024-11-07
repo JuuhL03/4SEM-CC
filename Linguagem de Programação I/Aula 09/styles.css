@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #00aaff;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+    margin-bottom: 20px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #0088cc;
+}
+
+.featured-games {
+    margin: 20px auto;
+    width: 90%;
+}
+
+.game-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background-color: #1c1c1c;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.game-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.rating-form {
+    margin-top: 10px;
+}
+
+.rating-form select {
+    padding: 5px;
+    background-color: #1c1c1c;
+    color: white;
+    border: 1px solid #00aaff;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.rating-button {
+    padding: 5px 10px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rating-button:hover {
+    background-color: #0088cc;
+}
+
+.form-section, .confirm-section, .table-section, .search-section {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+}
+
+.game-form label {
+    display: block;
+    margin-top: 10px;
+    color: #00aaff;
+}
+
+input[type="text"], input[type="number"], textarea, select, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #00aaff;
+    border-radius: 4px;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.table-image {
+    width: 80px;
+    border-radius: 5px;
+}
+
+.submit-button {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.action-button, .search-button, .delete-button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+}
+
+.delete-button:hover {
+    background-color: #e60000;
+}
+

@@ -1,0 +1,4 @@
+Carlos, Notas: 8.5, 7.0, 9.5, Média: 8.33
+Mariana, Notas: 6.0, 7.5, 8.0, Média: 7.17
+Júlio, Notas: 9.0, 8.5, 7.5, Média: 8.33
+Ana, Notas: 7.0, 6.5, 8.0, Média: 7.17

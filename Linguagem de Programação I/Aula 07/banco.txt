@@ -1,0 +1,28 @@
+CREATE TABLE clientes (
+    cpf VARCHAR(11) PRIMARY KEY,  
+    nome VARCHAR(255) NOT NULL,
+    genero VARCHAR(50) NOT NULL,
+    idade INT NOT NULL,
+    tradelink VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE enderecos (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    cpf_cliente VARCHAR(11),  
+    cep VARCHAR(9) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(100),
+    FOREIGN KEY (cpf_cliente) REFERENCES clientes(cpf)  
+);
+
+CREATE TABLE vendas (
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    cpf_cliente VARCHAR(11),  
+    skin_id INT NOT NULL,  
+    quantidade INT NOT NULL,
+    preco_unitario DECIMAL(10, 2) NOT NULL,
+    forma_pagamento VARCHAR(50) NOT NULL,
+    FOREIGN KEY (cpf_cliente) REFERENCES clientes(cpf) 
+);

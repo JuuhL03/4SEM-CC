@@ -1,0 +1,25 @@
+CREATE DATABASE IF NOT EXISTS bd_jogos;
+USE bd_jogos;
+
+CREATE TABLE IF NOT EXISTS tb_jogos (
+    id_jogo INT AUTO_INCREMENT PRIMARY KEY,
+    nome_jogo VARCHAR(50) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    categoria VARCHAR(20) NOT NULL,
+    descricao TEXT,
+    ano_lancamento YEAR,
+    loja VARCHAR(30),
+    quantidade INT,
+    idade_indicada INT,
+    avaliacao DECIMAL(3,2) DEFAULT 0,
+    num_avaliacoes INT DEFAULT 0,
+    imagem_jogo VARCHAR(255) DEFAULT NULL
+);
+
+INSERT INTO tb_jogos (nome_jogo, preco, categoria, descricao, ano_lancamento, loja, quantidade, idade_indicada, avaliacao, num_avaliacoes) VALUES
+('The Witcher 3', 99.90, 'RPG', 'Jogo de RPG com uma história envolvente', 2015, 'Steam', 10, 18, 4.5, 10),
+('Minecraft', 59.90, 'Sandbox', 'Jogo de construção em um mundo aberto', 2011, 'Microsoft Store', 20, 10, 4.7, 25),
+('Cyberpunk 2077', 199.90, 'Ação', 'Jogo de ação e aventura em um mundo futurista', 2020, 'GOG', 5, 18, 3.8, 15),
+('Fortnite', 0.00, 'Battle Royale', 'Jogo gratuito de batalha real', 2017, 'Epic Games', 50, 12, 4.3, 30),
+('Red Dead Redemption 2', 249.90, 'Ação', 'Aventura no Velho Oeste', 2018, 'Rockstar Games Launcher', 8, 18, 4.6, 20),
+('GTA V', 79.90, 'Ação', 'Aventura criminal em mundo aberto', 2013, 'Steam', 15, 18, 4.5, 40);
