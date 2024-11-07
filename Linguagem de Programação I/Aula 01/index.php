@@ -18,7 +18,7 @@
     <div class="text-center">
         <img src="src/gifben10.gif" style="height: 200px;">
         <div class="text-center mt-2">
-            <h1>Bem-vindo ao Universo Ben 10</h1>
+            <h1>Bem-vindo ao Universo</h1>
             <p class="mt-1">Explore o Omnitrix e descubra os incríveis alienígenas de Ben 10.</p>
         </div>
     </div>
